@@ -1,5 +1,13 @@
 import unittest
 
+# from unittest import TestCase, main # можно писать так
+
+# from MyPrograms.alesson import qwerty
+# ну или указывать путь к локальному модулю Глобальная папка.папка внутри и импорт модуля
+
+# from maintwo import plus # чтобы импортировать конкретную функцию
+
+# import main   чтобы импортировать все
 '''Описание unittest
 Полезная черта unittest - автоматизированное тестирование. Есть и другие:
 
@@ -54,12 +62,22 @@ test runner - это компонент, который организует в�
 ''' Пример синтаксиса №1'''
 
 
+def main(a, b):
+    return a + b
+
+
 class TestUM(unittest.TestCase):
     def setUp(self):
         pass
 
     def tearDown(self):
         pass
+
+    def test_main(self):
+        self.assertEqual(main(1, 2), 1)  # позитивный тест
+
+    def test_main2(self):
+        self.assertEqual(main(1, 2), 3)  # негативный тест
 
     def test_numbers_3_4(self):
         self.assertEqual(3 * 4, 12)
