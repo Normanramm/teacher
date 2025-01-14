@@ -2,4 +2,4 @@
 
 # Here are some syntax outlines for the Python programming language.
 
-teacher_test.py пример unittest
+teacher_test.py и test.py пример unittest
